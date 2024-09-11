@@ -155,16 +155,19 @@ select:focus::after {
   border-top-color: #666;
 }
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 767px) {
   .container {
-    width: 90%; /* Increase width to 90% for mobile devices */
+    width: 95%; /* Increase width to 95% for mobile devices */
     margin: 0 auto; /* Center the container */
   }
 
   .App {
-    width: 90%; /* Increase the width of the .App container for mobile devices */
+    width: 95%; /* Increase the width of the .App container for mobile devices */
+    padding: 20px; /* Add more padding to make it feel more spacious */
   }
 }
+
 
 
 /* Optional: styles for tablets */
