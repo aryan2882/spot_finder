@@ -264,7 +264,7 @@ const App = () => {
 
     try {
       // Create an order on the server
-      const orderResponse = await axios.post('http://localhost:3000/payments/create-order', {
+      const orderResponse = await axios.post('https://payment-po0w.onrender.com/payments/create-order', {
         amount: amount *100, // Convert to paise
         currency: 'INR'
       });
@@ -272,7 +272,7 @@ const App = () => {
       const { id, amount: orderAmount, currency } = orderResponse.data;
 
       // Create a payment link
-      const linkResponse = await axios.post('http://localhost:3000/payments/create-payment-link', {
+      const linkResponse = await axios.post('https://payment-po0w.onrender.com/payments/create-payment-link', {
         amount: amount *100, // Convert to paise
         currency: 'INR',
         description: 'Payment for your purchase'
@@ -296,7 +296,7 @@ const App = () => {
           console.log('Payment Successful:', response);
 
           try {
-            const webhookResponse = await axios.post('http://localhost:3000/payments/webhook', {
+            const webhookResponse = await axios.post('https://payment-po0w.onrender.com/payments/webhook', {
               paymentId: response.razorpay_payment_id,
               orderId: response.razorpay_order_id,
               signature: response.razorpay_signature,
