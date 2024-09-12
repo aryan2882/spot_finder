@@ -5,7 +5,7 @@ import 'register.dart';
 import 'login.dart';
 import 'map_navigation.dart';
 import 'package:firebase_database/firebase_database.dart';
-
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 void main() async {
   // Ensure that widget binding is initialized
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,6 +25,7 @@ void main() async {
   database.setPersistenceEnabled(true);
 
   // Run the app after Firebase initialization is complete
+  await dotenv.load(fileName: ".env");
   runApp(MyApp());
 }
 
