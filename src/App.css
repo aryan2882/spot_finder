@@ -1,0 +1,201 @@
+/* App.css */
+
+/* General container styling */
+body
+{
+  background-color: #061823;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top:10%;
+  padding-bottom: 10%;
+}
+.App {
+  background-color:#12094d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: Roboto, sans-serif; /* Use a font similar to Razorpay */
+  width: 40%;
+  height: auto; /* Adjust height dynamically based on content */
+  border: 1px solid #ccc; /* Thinner border */
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: white;
+}
+
+select, input, button {
+  padding: 10px;
+  font-size: 1rem;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #3498DB; /* Razorpay-like blue */
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #061823;
+}
+
+.qrcode img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+.invoice {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.invoice p {
+  margin: 5px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  /* padding: 20px; */
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+/* Additional Razorpay-inspired styles */
+
+.header {
+  background-color: #161B22; /* Darker blue background */
+  color: #FFFFFF; /* White text */
+  padding: 10px;
+  text-align: center;
+}
+
+.footer {
+  background-color: #161B22;
+  color: #FFFFFF;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 60px;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+}
+
+/* Remove the default appearance */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #f0f0f0; /* Background color of the select box */
+  color: #333; /* Text color */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a custom arrow for dropdown */
+select::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-top-color: #333;
+}
+
+/* Dropdown options */
+select option {
+  background-color: #0ba9f8; /* Background color of options */
+  color: #333; /* Text color of options */
+  
+}
+
+/* Change dropdown arrow icon when opened */
+select:focus::after {
+  border-top-color: #666;
+}
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 767px) {
+  .container {
+    width: 95%; /* Increase width to 95% for mobile devices */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .App {
+    width: 95%; /* Increase the width of the .App container for mobile devices */
+    padding: 20px; /* Add more padding to make it feel more spacious */
+  }
+}
+
+
+
+/* Optional: styles for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    width: 85%; /* Limit width to 85% on tablets */
+    margin: 0 auto; /* Center the container */
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .container {
+    width: 90%; /* Limit width to 90% on laptops */
+    margin: 0 auto; /* Center the container */
+    min-width: 1800px;
+  }
+}
+
+/* Styles for desktops and larger screens */
+@media (min-width: 1441px) {
+  .container {
+    width: 100%; /* Full width on larger screens */
+    margin: 0 auto; /* Center the container */
+  }
+}
+  .qrcode img {
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    
+  }
+
